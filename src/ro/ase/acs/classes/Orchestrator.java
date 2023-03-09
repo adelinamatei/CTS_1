@@ -10,18 +10,16 @@ import java.sql.Connection;
 public class Orchestrator {
     public DatabaseConnection databaseConnection;
     public DatabaseCreateTable databaseCreateTable;
-
     public DatabaseReadData databaseReadData;
     public DatabaseInsertData databaseInsertData;
 
-
-    public Orchestrator(DatabaseConnection databaseConnection, DatabaseCreateTable databaseCreateTable, DatabaseReadData databaseReadData, DatabaseInsertData databaseInsertData) {
+    public Orchestrator(DatabaseConnection databaseConnection, DatabaseCreateTable databaseCreateTable,
+                        DatabaseReadData databaseReadData, DatabaseInsertData databaseInsertData) {
         this.databaseConnection = databaseConnection;
         this.databaseCreateTable = databaseCreateTable;
         this.databaseReadData = databaseReadData;
         this.databaseInsertData = databaseInsertData;
     }
-
 
     public void runWorkflow() {
         try {
